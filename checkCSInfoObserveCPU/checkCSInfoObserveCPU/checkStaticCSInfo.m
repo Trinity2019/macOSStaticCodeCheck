@@ -62,11 +62,12 @@
     }
 
     // Static code sign check with no particular flags (default behavior)
-    status = SecStaticCodeCheckValidity(pStaticCode, (kSecCSDefaultFlags), pSecRequirement);
+    status = SecStaticCodeCheckValidityWithErrors(
+        pStaticCode, (kSecCSDefaultFlags), pSecRequirement, NULL);
     if (errSecSuccess != status)
     {
-        NSLog(
-            @"SecStaticCodeCheckValidity returned err code =  %@", [NSNumber numberWithInt:status]);
+        NSLog(@"SecStaticCodeCheckValidityWithErrors returned err code =  %@",
+            [NSNumber numberWithInt:status]);
     }
 
     pStatusCFstr = SecCopyErrorMessageString(status, NULL);
