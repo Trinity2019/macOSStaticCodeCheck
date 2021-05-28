@@ -15,4 +15,4 @@ Open `checkCSInfoObserveCPU.xcodeproj` project and build with `Xcode`.
 ![checkCSInfoObserveCPU_400_CPU](https://user-images.githubusercontent.com/56367679/119930386-30a11600-bf34-11eb-975f-5ce0252bfe71.png)
 
 
-## [spindump output](./checkCSInfoObserveCPU.txt)
+## Spindump output is [here](./checkCSInfoObserveCPU.txt)
