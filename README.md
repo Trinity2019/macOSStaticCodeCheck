@@ -11,7 +11,16 @@ git clone git@github.com:Trinity2019/macOSStaticCodeCheck.git
 ## Build:
 Open `checkCSInfoObserveCPU.xcodeproj` project and build with `Xcode`.
 
-## Test Result:
+## std output of the program:
+```2021-06-01 20:36:15.784 checkCSInfoObserveCPU[51925:3972133] Reading code sign information of [/Applications/Xcode.app/Contents/MacOS/Xcode]...
+2021-06-01 20:38:29.230 checkCSInfoObserveCPU[51925:3972133] SecStaticCodeCheckValidityWithErrors returned err code =  -67054
+2021-06-01 20:38:29.230 checkCSInfoObserveCPU[51925:3972133] SecStaticCodeCheckValidityWithErrors took 134 seconds to finish.
+2021-06-01 20:38:29.248 checkCSInfoObserveCPU[51925:3972133] Signature status: a sealed resource is missing or invalid
+2021-06-01 20:38:29.248 checkCSInfoObserveCPU[51925:3972133] Team ID =  59GAB85EFG
+2021-06-01 20:38:29.248 checkCSInfoObserveCPU[51925:3972133] Signing ID =  com.apple.dt.Xcode
+```
+
+## CPU Test Result:
 ![checkCSInfoObserveCPU_400_CPU](https://user-images.githubusercontent.com/56367679/119930386-30a11600-bf34-11eb-975f-5ce0252bfe71.png)
 
 
