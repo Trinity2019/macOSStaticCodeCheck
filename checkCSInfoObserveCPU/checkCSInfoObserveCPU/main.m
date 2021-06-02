@@ -1,5 +1,3 @@
-#define RAZOR_PRETTY_FILE "main.mm"
-
 //
 //  main.m
 //  ReadSignatureObserveCPU

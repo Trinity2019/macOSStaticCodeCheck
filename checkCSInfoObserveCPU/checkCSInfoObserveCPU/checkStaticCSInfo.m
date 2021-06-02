@@ -1,11 +1,10 @@
-#define RAZOR_PRETTY_FILE "checkStaticCSInfo.mm"
-
 //
 //  checkStaticCSInfo.m
 //  checkCSInfoObserveCPU
 //
 //  Created by Yamin Tian on 5/25/21.
 //
+
 
 #import <Foundation/Foundation.h>
 #import <Security/Security.h>
@@ -29,6 +28,12 @@
     CFDictionaryRef pSigningInfo = NULL;
     CFStringRef pTeamId          = NULL;
     CFStringRef pSigningId       = NULL;
+
+#ifdef DEBUG
+    struct timespec start = {0};
+    struct timespec end   = {0};
+    uint64_t duration     = 0;
+#endif
 
     if ((NULL == path) || (NULL == requirement))
     {
@@ -61,6 +66,10 @@
         goto Exit;
     }
 
+#ifdef DEBUG
+    clock_gettime(CLOCK_MONOTONIC, &start);
+#endif
+
     // Static code sign check with no particular flags (default behavior)
     status = SecStaticCodeCheckValidityWithErrors(
         pStaticCode, (kSecCSDefaultFlags), pSecRequirement, NULL);
@@ -69,6 +78,13 @@
         NSLog(@"SecStaticCodeCheckValidityWithErrors returned err code =  %@",
             [NSNumber numberWithInt:status]);
     }
+#ifdef DEBUG
+    clock_gettime(CLOCK_MONOTONIC, &end);
+
+    duration = end.tv_sec - start.tv_sec;
+
+    NSLog(@"SecStaticCodeCheckValidityWithErrors took %llu seconds to finish.", duration);
+#endif
 
     pStatusCFstr = SecCopyErrorMessageString(status, NULL);
     NSLog(@"Signature status: %@", pStatusCFstr);
@@ -95,6 +111,7 @@
     {
         NSLog(@"Signing ID =  %@", pSigningId);
     }
+
 
 Exit:
     // Cleanups
