@@ -11,8 +11,8 @@
 @interface checkStaticCSInfo : NSObject
 
 /**
- * @brief Check validity and reads static codesign information against the code object specified by
- * a file system path.
+ * @brief Check validity and reads static codesign information of the code object specified by
+ *        a file system path.
  *
  * @param[in] path a file system path
  * @param[in] requirement the text string form of a code requirement. Such as: "anchor trusted"

@@ -81,6 +81,7 @@
 #ifdef DEBUG
     clock_gettime(CLOCK_MONOTONIC, &end);
 
+    // Not counting nanos for now. Will add later.
     duration = end.tv_sec - start.tv_sec;
 
     NSLog(@"SecStaticCodeCheckValidityWithErrors took %llu seconds to finish.", duration);
