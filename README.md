@@ -19,9 +19,11 @@ Open `checkCSInfoObserveCPU.xcodeproj` project and build with `Xcode`.
 2021-06-01 20:38:29.248 checkCSInfoObserveCPU[51925:3972133] Team ID =  59GAB85EFG
 2021-06-01 20:38:29.248 checkCSInfoObserveCPU[51925:3972133] Signing ID =  com.apple.dt.Xcode
 ```
+Note: For simplicity, the code assumes `Xcode` is installed at this path: `/Applications/Xcode.app/Contents/MacOS/Xcode` and hardcoded it in the main function. You can also change the hardcoded path to something else for testing purposes.
 
 ## CPU Test Result:
 ![checkCSInfoObserveCPU_400_CPU](https://user-images.githubusercontent.com/56367679/119930386-30a11600-bf34-11eb-975f-5ce0252bfe71.png)
+Note: Above result was obtained from a physical macbook pro with 8 cores. Depending on the hardware spec, if you run the same program on different machines, %CPU consumption may differ. For example, I've also tested the same program on a virtual machine with 4 cores, and the %CPU consumption range was 100~200%.
 
 
 ## Spindump output is [here](./checkCSInfoObserveCPU.txt)
