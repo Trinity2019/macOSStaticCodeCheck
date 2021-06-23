@@ -23,7 +23,9 @@ Note: For simplicity, the code assumes `Xcode` is installed at this path: `/Appl
 
 ## CPU Test Result:
 ![checkCSInfoObserveCPU_400_CPU](https://user-images.githubusercontent.com/56367679/119930386-30a11600-bf34-11eb-975f-5ce0252bfe71.png)
-Note: Above result was obtained from a physical macbook pro with 8 cores. Depending on the hardware spec, if you run the same program on different machines, %CPU consumption may differ. For example, I've also tested the same program on a virtual machine with 4 cores, and the %CPU consumption range was 100~200%.
+Test environment: Xcode Version 12.4 (12D4e), macOS Big Sur 11.3.1 (20E241), MacBook Pro 2.4 GHz 8-Core Intel Core i9
+
+Note: Depending on the hardware spec, if you run the same program on different machines, %CPU consumption may differ. For example, I've also tested the same program on a virtual machine with 4 cores, and the %CPU consumption range was 100~200% but it took longer to finish.
 
 
 ## Spindump output is [here](./checkCSInfoObserveCPU.txt)
