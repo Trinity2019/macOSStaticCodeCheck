@@ -1,5 +1,5 @@
 # macOS Static Code Signing Check
-This sample code is associated with my blog post [Practical CPU time performance tuning for security software: Part 1](https://www.elastic.co/blog/practical-cpu-time-performance-tuning-security-software). It demonstrates how to check static code signing information using `SecStaticCodeCheckValidityWithErrors` API and then demonstrates it's impact on the CPU usage when it is used on a large bundle.
+This sample code is associated with my blog post [Practical CPU time performance tuning for security software: Part 1](https://www.elastic.co/blog/practical-cpu-time-performance-tuning-security-software) and [Part 2](https://www.elastic.co/blog/practical-cpu-time-performance-tuning-for-security-software-part-2). It demonstrates how to check static code signing information using `SecStaticCodeCheckValidityWithErrors` API and then demonstrates it's impact on the CPU usage when it is used on a large bundle.
 
 Note that the purpose of this sample is not to question Apple’s implementation of `SecStaticCodeCheckValidity*` on the performance side. Instead, I want to demonstrate that code signing validation is CPU intensive.  We should carefully evaluate its impact on CPU/resource consumption and carefully choose when to use it and when not to use it.
 
